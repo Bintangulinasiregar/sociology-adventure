@@ -558,12 +558,21 @@
                 </ul>
             </div>
         </div>
-        <div class="music-control">
-            <audio src=""></audio>
+        <div class="music-control" style="position: absolute; right: 0; bottom: 0; z-index: 10;">
+            <audio id="background-music" loop >
+                <source src="audio/Calimba - E's Jammy Jams.mp3">
+            </audio>
         </div>
     </div>
 
     <script>
+        window.onclick = function () {
+            const audioBg = document.getElementById('background-music');
+            audioBg.volume = 0.3;
+            audioBg.play().catch(function (error) {
+                alert('Audio tidak dapat diputar');
+            });
+        };
         // const giftChest = document.getElementById('chest-gift-1');
         // const removeChest = document.getElementById('obtainChest');
         // const acceptGift = document.getElementById('gift-content');
