@@ -367,7 +367,7 @@
             } else if (timeRemaining === 120) {
                 result.textContent = "Silahkan mulai permainan dengan mencocokkan kotak-kotak yang ada!";
             }
-            else if (correctPairs === totalPairs) {
+            else if (correctPairs >= 9) {
                 result.textContent = "Selamat, kamu berhasil menyelesaikan permainan";
                 scoreDisplay.textContent = "Skor kamu adalah: " + timeRemaining * 2;
                 
